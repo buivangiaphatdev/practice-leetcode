@@ -34,3 +34,14 @@ function isAnagram2(str1: string, str2: string):boolean {
   return true;
 }
 console.log(isAnagram2("anagram", "nagaram"));
+
+function isAnagram3(str1: string, str2:string):boolean{
+  str1= str1.split('').sort().join('');
+  str2= str2.split('').sort().join('');
+
+  if(str1.length != str2.length) return false;
+  for(let i=0; i<str1.length;i++){
+    if(str1[i] != str2[i]) return false;
+  }
+  return true;
+}
