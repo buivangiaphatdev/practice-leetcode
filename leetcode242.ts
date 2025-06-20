@@ -1,3 +1,5 @@
+
+//complexity: O(n+k)
 function isAnagram1(str1: string, str2: string): boolean {
   if (str1.length != str2.length) return false;
 
@@ -15,6 +17,8 @@ function isAnagram1(str1: string, str2: string): boolean {
   }
   return true;
 }
+
+//complexity: O(n)
 
 function isAnagram2(str1: string, str2: string):boolean {
   if (str1.length != str2.length) return false;
@@ -35,6 +39,7 @@ function isAnagram2(str1: string, str2: string):boolean {
 }
 console.log(isAnagram2("anagram", "nagaram"));
 
+//complexity: O(nlogn)
 function isAnagram3(str1: string, str2:string):boolean{
   str1= str1.split('').sort().join('');
   str2= str2.split('').sort().join('');
